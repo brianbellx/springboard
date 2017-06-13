@@ -1,0 +1,80 @@
+Signup vs Engagement events
+
+SELECT  DATE_TRUNC('week',occurred_at) AS week,
+        COUNT(CASE WHEN e.event_type = 'engagement' THEN e.user_id ELSE NULL END) AS engagement_events,
+        COUNT(CASE WHEN e.event_type = 'signup_flow' THEN e.user_id ELSE NULL END) AS signup_events
+FROM tutorial.yammer_events e
+
+GROUP BY week
+ORDER BY week
+
+
+Engagement Event Comparison
+
+SELECT  DATE_TRUNC('week',occurred_at) AS week,
+        COUNT(CASE WHEN e.event_name = 'home_page' THEN e.user_id ELSE NULL END) AS home_page,
+        COUNT(CASE WHEN e.event_name = 'like_message' THEN e.user_id ELSE NULL END) AS like_message,
+        COUNT(CASE WHEN e.event_name = 'login' THEN e.user_id ELSE NULL END) AS login,
+        COUNT(CASE WHEN e.event_name = 'search_autocomplete' THEN e.user_id ELSE NULL END) AS search_autocomplete,
+        COUNT(CASE WHEN e.event_name = 'search_run' THEN e.user_id ELSE NULL END) AS search_run,
+        COUNT(CASE WHEN e.event_name = 'send_message' THEN e.user_id ELSE NULL END) AS send_message,
+        COUNT(CASE WHEN e.event_name = 'view_inbox' THEN e.user_id ELSE NULL END) AS view_inbox
+        
+FROM tutorial.yammer_events e
+GROUP BY week
+ORDER BY week
+
+
+Device comparison
+
+SELECT DATE_TRUNC('week', occurred_at) AS week,
+       COUNT(DISTINCT e.user_id) AS weekly_active_users,
+       COUNT(DISTINCT CASE WHEN e.device IN ('macbook pro','lenovo thinkpad','macbook air','dell inspiron notebook',
+          'asus chromebook','dell inspiron desktop','acer aspire notebook','hp pavilion desktop','acer aspire desktop','mac mini')
+          THEN e.user_id ELSE NULL END) AS PC,
+       COUNT(DISTINCT CASE WHEN e.device IN ('iphone 5','samsung galaxy s4','nexus 5','iphone 5s','iphone 4s','nokia lumia 635',
+       'htc one','samsung galaxy note','amazon fire phone', 'ipad air','nexus 7','ipad mini','nexus 10','kindle fire','windows surface',
+        'samsumg galaxy tablet') THEN e.user_id ELSE NULL END) AS mobile
+  FROM tutorial.yammer_events e
+ WHERE e.event_type = 'engagement'
+   AND e.event_name = 'login'
+ GROUP BY week
+ ORDER BY week
+
+
+Email Activity
+
+SELECT DATE_TRUNC('week', occurred_at) AS week,
+       COUNT(CASE WHEN e.action = 'sent_weekly_digest' THEN e.user_id ELSE NULL END) AS weekly_emails,
+       COUNT(CASE WHEN e.action = 'sent_reengagement_email' THEN e.user_id ELSE NULL END) AS reengagement_emails,
+       COUNT(CASE WHEN e.action = 'email_open' THEN e.user_id ELSE NULL END) AS email_opens,
+       COUNT(CASE WHEN e.action = 'email_clickthrough' THEN e.user_id ELSE NULL END) AS email_clickthroughs
+  FROM tutorial.yammer_emails e
+ GROUP BY week
+ ORDER BY week
+
+
+Email clickthrough comparison
+
+
+SELECT DATE_TRUNC('week',e1.occurred_at) AS week,
+       COUNT(CASE WHEN e1.action = 'sent_weekly_digest' THEN e1.user_id ELSE NULL END) AS weekly_emails,
+       COUNT(CASE WHEN e1.action = 'sent_weekly_digest' THEN e2.user_id ELSE NULL END) AS weekly_opens,
+       COUNT(CASE WHEN e1.action = 'sent_weekly_digest' THEN e3.user_id ELSE NULL END) AS weekly_ctr,
+       COUNT(CASE WHEN e1.action = 'sent_reengagement_email' THEN e1.user_id ELSE NULL END) AS retain_emails,
+       COUNT(CASE WHEN e1.action = 'sent_reengagement_email' THEN e2.user_id ELSE NULL END) AS retain_opens,
+       COUNT(CASE WHEN e1.action = 'sent_reengagement_email' THEN e3.user_id ELSE NULL END) AS retain_ctr
+  FROM tutorial.yammer_emails e1
+  LEFT JOIN tutorial.yammer_emails e2
+    ON e2.occurred_at >= e1.occurred_at
+   AND e2.occurred_at < e1.occurred_at + INTERVAL '5 MINUTE'
+   AND e2.user_id = e1.user_id
+   AND e2.action = 'email_open'
+  LEFT JOIN tutorial.yammer_emails e3
+    ON e3.occurred_at >= e2.occurred_at
+   AND e3.occurred_at < e2.occurred_at + INTERVAL '5 MINUTE'
+   AND e3.user_id = e2.user_id
+   AND e3.action = 'email_clickthrough'
+ WHERE e1.action IN ('sent_weekly_digest','sent_reengagement_email')
+ GROUP BY week
+ ORDER BY week
