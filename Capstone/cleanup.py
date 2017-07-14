@@ -72,7 +72,7 @@ cols = [u'age', u'sex',
 prefill = prefill[cols]
 
 #fills NaNs by KNN imputation
-fill = KNN(k=7).complete(prefill)
+fill = KNN(k=9).complete(prefill)
 data = pd.DataFrame(fill, columns = cols)
 
 print data.isnull().sum().sum()
@@ -85,4 +85,8 @@ temp = data.oldpeak
 data = data.round().astype(int)
 data.oldpeak = temp
 
+
 data.to_csv('clean.csv')
+
+
+
