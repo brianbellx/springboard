@@ -37,3 +37,13 @@ testscore = clf.score(xtest, ytest)
 
 print 'Train set accuracy: ', trainscore
 print 'Test set accuracy: ', testscore
+
+guess = pd.DataFrame({'prob': clf.predict_proba(xtest)[:,1], 
+                   'state': clf.predict(xtest)})
+
+act = ytest.reset_index()
+
+right = guess.state ==  act.pred
+wrong = ~right
+
+sns.distplot(guess.prob[right], kde = False, bins = 10)
