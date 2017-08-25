@@ -1,2 +1,198 @@
 
 .ipynb_checkpoints/spark-checkpoint.ipynb
+
+.ipynb_checkpoints/sparkclean-checkpoint.ipynb
+
+Books Capstone/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+
+Books Capstone/.ipynb_checkpoints/Untitled1-checkpoint.ipynb
+
+Books Capstone/.ipynb_checkpoints/tokenizer-checkpoint.ipynb
+
+Books Capstone/BX-Book-Ratings.csv
+
+Books Capstone/BX-Books.csv
+
+Books Capstone/BX-CSV-Dump.zip
+
+Books Capstone/BX-Users.csv
+
+Books Capstone/LDAvis_prep
+
+Books Capstone/bigram_model_all.txt
+
+Books Capstone/bigram_sentences_all.txt
+
+Books Capstone/booksclean.csv
+
+Books Capstone/cl1.png
+
+Books Capstone/decoder.py
+
+Books Capstone/decoder.pyc
+
+Books Capstone/descriptions2.csv
+
+Books Capstone/descriptions3.csv
+
+Books Capstone/details.csv
+
+Books Capstone/lda_model_all.expElogbeta.npy
+
+Books Capstone/englishtokens.csv
+
+Books Capstone/lda_model_all.id2word
+
+Books Capstone/lda_model_all
+
+Books Capstone/tokenizer.ipynb
+
+Books Capstone/lda_model_all.state
+
+Books Capstone/simusers.py
+
+Books Capstone/trigram_bow_corpus_all.mm
+
+Books Capstone/trigram_bow_corpus_all.mm.index
+
+Books Capstone/trigram_descriptions.txt
+
+Books Capstone/trigram_dict
+
+Books Capstone/trigram_model_all.txt
+
+Books Capstone/trigram_sentences_all.txt
+
+Books Capstone/unigram_sentences_all.txt
+
+Books Capstone/word2vec_model_all
+
+bokeh-notebooks-master/LICENSE.txt
+
+bokeh-notebooks-master/README.md
+
+bokeh-notebooks-master/data/olympics.json
+
+bokeh-notebooks-master/gallery/bollinger.ipynb
+
+bokeh-notebooks-master/gallery/burtin.ipynb
+
+bokeh-notebooks-master/gallery/candlestick.ipynb
+
+bokeh-notebooks-master/gallery/color_scatterplot.ipynb
+
+bokeh-notebooks-master/gallery/correlation.ipynb
+
+bokeh-notebooks-master/gallery/glucose.ipynb
+
+bokeh-notebooks-master/gallery/linked_brushing.ipynb
+
+bokeh-notebooks-master/gallery/linked_panning.ipynb
+
+bokeh-notebooks-master/gallery/lorenz.ipynb
+
+bokeh-notebooks-master/gallery/rect.ipynb
+
+bokeh-notebooks-master/gallery/texas.ipynb
+
+bokeh-notebooks-master/images/bokeh-header.png
+
+bokeh-notebooks-master/index.ipynb
+
+bokeh-notebooks-master/quickstart/README.md
+
+bokeh-notebooks-master/quickstart/animated.gif
+
+bokeh-notebooks-master/quickstart/barplot.html
+
+bokeh-notebooks-master/quickstart/bokeh-transparent.png
+
+bokeh-notebooks-master/quickstart/boxplot.png
+
+bokeh-notebooks-master/quickstart/burtin.png
+
+bokeh-notebooks-master/quickstart/chord_chart.png
+
+bokeh-notebooks-master/quickstart/les_mis.png
+
+bokeh-notebooks-master/quickstart/periodic.png
+
+bokeh-notebooks-master/quickstart/quickstart.ipynb
+
+bokeh-notebooks-master/quickstart/texas.png
+
+bokeh-notebooks-master/tutorial/00 - intro.ipynb
+
+bokeh-notebooks-master/tutorial/01 - plotting.ipynb
+
+bokeh-notebooks-master/tutorial/02 - column data source.ipynb
+
+bokeh-notebooks-master/tutorial/03 - interactions.ipynb
+
+bokeh-notebooks-master/tutorial/04 - styling.ipynb
+
+bokeh-notebooks-master/tutorial/05 - data transformations.ipynb
+
+bokeh-notebooks-master/tutorial/06 - server.ipynb
+
+bokeh-notebooks-master/tutorial/07 - sharing.ipynb
+
+bokeh-notebooks-master/tutorial/08 - annotations.ipynb
+
+bokeh-notebooks-master/tutorial/09 - models.ipynb
+
+bokeh-notebooks-master/tutorial/10 - charts.ipynb
+
+bokeh-notebooks-master/tutorial/11 - geo.ipynb
+
+bokeh-notebooks-master/tutorial/12 - datashader.ipynb
+
+bokeh-notebooks-master/tutorial/13 - holoviews.ipynb
+
+bokeh-notebooks-master/tutorial/A1 - Extra Resources.ipynb
+
+bokeh-notebooks-master/tutorial/A2 - Building up Gapminder.ipynb
+
+bokeh-notebooks-master/tutorial/README.md
+
+bokeh-notebooks-master/tutorial/assets/5_gaussians_3_ways.png
+
+bokeh-notebooks-master/tutorial/assets/5_gaussians_dsblue.png
+
+bokeh-notebooks-master/tutorial/assets/5_gaussians_labeled.png
+
+bokeh-notebooks-master/tutorial/assets/__init__.py
+
+bokeh-notebooks-master/tutorial/assets/datashader_examples.png
+
+bokeh-notebooks-master/tutorial/assets/gapminder.csv
+
+bokeh-notebooks-master/tutorial/assets/gapminder_styles.css
+
+bokeh-notebooks-master/tutorial/assets/gapminder_template.jinja
+
+bokeh-notebooks-master/tutorial/assets/images/arch.png
+
+bokeh-notebooks-master/tutorial/assets/images/bokeh-transparent.png
+
+bokeh-notebooks-master/tutorial/assets/images/bokeh_basic.svg
+
+bokeh-notebooks-master/tutorial/assets/images/bokeh_with_tentacles_2.svg
+
+bokeh-notebooks-master/tutorial/assets/images/charts_line.png
+
+bokeh-notebooks-master/tutorial/assets/images/charts_medal_stacked.png
+
+bokeh-notebooks-master/tutorial/assets/images/charts_medal_stacked_colored.png
+
+bokeh-notebooks-master/tutorial/assets/solutions.txt
+
+bokeh-notebooks-master/tutorial/ellipses.html
+
+bokeh-notebooks-master/tutorial/environment.yml
+
+bokeh-notebooks-master/tutorial/utils.py
+
+bokeh-notebooks-master/tutorial/utils.pyc
+
+sparkclean.ipynb
